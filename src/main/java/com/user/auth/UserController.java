@@ -53,6 +53,12 @@ public class UserController {
 
         return userService.count();
     }
+    
+    @GetMapping("/users/upload")
+    public String upload() {
+
+        return userService.readFile();
+    }
 
     @DeleteMapping("/users/{id}")
     public void delete(@PathVariable String id) {
